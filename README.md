@@ -17,7 +17,7 @@ git clone https://github.com/bharathulaganathan/wezterm $HOME/.config/wezterm
 
 ### 🪁 Windows
 
-```ps
+```powershell
 # backup current config
 Move-Item $env:USERPROFILE\.wezterm.lua $env:USERPROFILE\.wezterm.lua.bak
 Move-Item $env:USERPROFILE\.config\wezterm $env:USERPROFILE\.config\wezterm.bak
