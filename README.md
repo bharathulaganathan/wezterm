@@ -1,8 +1,8 @@
-# WezTerm config by Bharath
+# 🖥️ WezTerm config by Bharath
 
 ##  Installation
 
-### Linux
+### 🐧 Linux
 
 ```sh
 # make a backup of current config
@@ -15,7 +15,7 @@ git clone https://github.com/bharathulaganathan/wezterm.git
 mv wezterm $HOME/.config
 ```
 
-### Windows
+### 🪁 Windows
 
 ```ps
 # make a backup of current config
