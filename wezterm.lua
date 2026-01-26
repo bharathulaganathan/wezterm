@@ -43,6 +43,9 @@ config.font = wezterm.font_with_fallback {
   'Cascadia Mono'
 }
 
+-- font size
+-- default is 12
+-- 14 is also fine
 config.font_size = 15 
 
 return config
