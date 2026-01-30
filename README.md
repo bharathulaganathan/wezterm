@@ -8,6 +8,7 @@ For a [WezTerm](https://wezterm.org/) installation, refer to the [documentation]
 
 ```sh
 # get WezTerm
+# FOR ARCH
 sudo pacman -S wezterm
 
 # backup current config
