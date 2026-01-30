@@ -7,6 +7,9 @@ For a [WezTerm](https://wezterm.org/) installation, refer to the [documentation]
 ### 🐧 Linux
 
 ```sh
+# get WezTerm
+sudo pacman -S wezterm
+
 # backup current config
 mv $HOME/.wezterm.lua{,.bak}
 mv $HOME/.config/wezterm{,.bak}
@@ -18,6 +21,9 @@ git clone https://github.com/bharathulaganathan/wezterm $HOME/.config/wezterm
 ### 🪁 Windows
 
 ```powershell
+# get WezTerm
+winget install --id wez.wezterm --exact --source winget
+
 # backup current config
 Move-Item $env:USERPROFILE\.wezterm.lua $env:USERPROFILE\.wezterm.lua.bak
 Move-Item $env:USERPROFILE\.config\wezterm $env:USERPROFILE\.config\wezterm.bak
