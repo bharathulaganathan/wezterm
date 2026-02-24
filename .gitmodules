@@ -1,0 +1,3 @@
+[submodule "github_theme_palette"]
+	path = github_theme_palette
+	url = https://github.com/bharathulaganathan/github_theme_palette.git
