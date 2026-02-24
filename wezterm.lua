@@ -17,19 +17,20 @@ config.tab_max_width = 37
 
 config.color_scheme = 'Github Dark'
 
-local github_dark = require 'github_dark'
+local github_palette = require 'github_theme_palette.github_palette'
+local github_dark = github_palette.dark
 
 config.colors = {
 
-  foreground = github_dark.text,   -- The default text color
-  background = github_dark.neutral[2],   -- The default background color
+  foreground = github_dark.fg,   -- The default text color
+  background = github_dark.bg,   -- The default background color
 
-  cursor_bg = github_dark.neutral[13],   -- Overrides the cell background color when the current cell is occupied by the cursor and the cursor style is set to Block
-  cursor_fg = github_dark.neutral[2],   -- Overrides the text color when the current cell is occupied by the cursor
-  cursor_border = github_dark.neutral[13],   -- Specifies the border color of the cursor when the cursor style is set to Block, or the color of the vertical or horizontal bar when the cursor style is set to Bar or Underline.
+  cursor_bg = github_dark.fg,   -- Overrides the cell background color when the current cell is occupied by the cursor and the cursor style is set to Block
+  cursor_fg = github_dark.bg,   -- Overrides the text color when the current cell is occupied by the cursor
+  cursor_border = github_dark.fg,   -- Specifies the border color of the cursor when the cursor style is set to Block, or the color of the vertical or horizontal bar when the cursor style is set to Bar or Underline.
 
-  selection_fg = github_dark.neutral[13],   -- the foreground color of selected text
-  selection_bg = github_dark.neutral[7],   -- the background color of selected text
+  selection_fg = github_dark.ansi.white,   -- the foreground color of selected text
+  selection_bg = github_dark.ansi.black,   -- the background color of selected text
 
   -- scrollbar_thumb = '#222222',   -- The color of the scrollbar "thumb"; the portion that represents the current viewport
 
@@ -38,24 +39,24 @@ config.colors = {
 
 
   ansi = {
-    github_dark.neutral[7], -- 'black' base-color-neutral-6
-    github_dark.red[4], -- 'maroon' base-color-red-3
-    github_dark.green[4], -- 'green' base-color-green-3
-    github_dark.yellow[4], -- 'olive' base-color-yellow-3
-    github_dark.blue[4], -- 'navy' base-color-blue-3
-    github_dark.purple[4], -- 'purple' base-color-purple-3
-    github_dark.pink[4], -- 'teal' base-color-pink-3
-    github_dark.neutral[13], -- 'silver' base-color-neutral-12
+    github_dark.ansi.black, -- 'black' base-color-neutral-6
+    github_dark.ansi.red, -- 'maroon' base-color-red-3
+    github_dark.ansi.green, -- 'green' base-color-green-3
+    github_dark.ansi.yellow, -- 'olive' base-color-yellow-3
+    github_dark.ansi.blue, -- 'navy' base-color-blue-3
+    github_dark.ansi.purple, -- 'purple' base-color-purple-3
+    github_dark.ansi.pink, -- 'teal' base-color-pink-3
+    github_dark.ansi.white, -- 'silver' base-color-neutral-12
   },
   brights = {
-    github_dark.neutral[9], -- 'grey' base-color-neutral-8
-    github_dark.red[3], -- 'red' base-color-red-2
-    github_dark.green[3], -- 'lime' base-color-green-2
-    github_dark.yellow[3], -- 'yellow' base-color-yellow-2
-    github_dark.blue[3], -- 'blue' base-color-blue-2
-    github_dark.purple[3], -- 'fuchsia' base-color-purple-2
-    github_dark.pink[3], -- 'aqua' base-color-pink-2
-    github_dark.neutral[14], -- 'white' base-color-neutral-13
+    github_dark.bright.black, -- 'grey' base-color-neutral-8
+    github_dark.bright.red, -- 'red' base-color-red-2
+    github_dark.bright.green, -- 'lime' base-color-green-2
+    github_dark.bright.yellow, -- 'yellow' base-color-yellow-2
+    github_dark.bright.blue, -- 'blue' base-color-blue-2
+    github_dark.bright.purple, -- 'fuchsia' base-color-purple-2
+    github_dark.bright.pink, -- 'aqua' base-color-pink-2
+    github_dark.bright.white, -- 'white' base-color-neutral-13
   },
 
   -- indexed = { [136] = '#af8700' },   -- Arbitrary colors of the palette in the range from 16 to 255
@@ -81,11 +82,11 @@ config.colors = {
   -- launcher_label_fg = { Color = '#ffffff' },
 
   tab_bar = {
-    background = github_dark.neutral[2],
+    background = github_dark.bg,
 
     active_tab = {
-      bg_color = github_dark.neutral[2],
-      fg_color = github_dark.text,
+      bg_color = github_dark.bg,
+      fg_color = github_dark.fg,
 
       intensity = 'Bold', -- "Half", "Normal" or "Bold"
 
@@ -95,8 +96,8 @@ config.colors = {
     },
 
     inactive_tab = {
-      bg_color = github_dark.neutral[7],
-      fg_color = github_dark.neutral[13],
+      bg_color = github_dark.ansi.black,
+      fg_color = github_dark.ansi.white,
 
       intensity = 'Normal', -- "Half", "Normal" or "Bold"
 
@@ -106,8 +107,8 @@ config.colors = {
     },
 
     inactive_tab_hover = {
-      bg_color = github_dark.neutral[9],
-      fg_color = github_dark.neutral[14],
+      bg_color = github_dark.bright.black,
+      fg_color = github_dark.bright.white,
 
       intensity = 'Bold', -- "Half", "Normal" or "Bold"
 
@@ -117,8 +118,8 @@ config.colors = {
     },
 
     new_tab = {
-      bg_color = github_dark.neutral[2],
-      fg_color = github_dark.text,
+      bg_color = github_dark.bg,
+      fg_color = github_dark.fg,
 
       intensity = 'Normal', -- "Half", "Normal" or "Bold"
 
@@ -128,8 +129,8 @@ config.colors = {
     },
 
     new_tab_hover = {
-      bg_color = github_dark.neutral[9],
-      fg_color = github_dark.neutral[14],
+      bg_color = github_dark.bright.black,
+      fg_color = github_dark.bright.white,
 
       intensity = 'Bold', -- "Half", "Normal" or "Bold"
 
